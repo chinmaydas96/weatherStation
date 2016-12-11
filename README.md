@@ -1,2 +1,2 @@
 # weatherStation
-## by Chinmay Das & Abhishek Panda
+## by Chinmay Das & Abhisek Panda
