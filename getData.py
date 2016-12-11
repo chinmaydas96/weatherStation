@@ -1,9 +1,8 @@
 from getTime import getTime
-from data import gtime
+from getTemp import getTemp
 
 while True:
         dtime = getTime()
         temp = getTemp()
         with open("data.tsv","a") as myfile:
-                myfile.write(dtime  +"\t" +str(temp) +"\n")
-~                                                               
+                myfile.write(dtime  +"\t" +str(temp) +"\n")                                                               

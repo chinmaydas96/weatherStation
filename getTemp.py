@@ -13,9 +13,9 @@ def getTemp():
         b = a[len(a) - 1]
         reading = b[2:]
         temp = float(reading) / 1000
-        print("hello Mr CHINMAY")
-        print ("room temperture=" + str(temp) + "*C")
-        time.sleep(2)
+      	#print("hello Mr CHINMAY")
+        #print ("room temperture=" + str(temp) + "*C")
+        #time.sleep(2)
         #subprocess.call("clear")
         s = s + 1
         return temp
