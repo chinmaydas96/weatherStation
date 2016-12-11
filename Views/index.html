@@ -79,7 +79,14 @@
 			});
 
 		</script>
-        
+    
+    <script>
+      setInterval(function(){
+          var element = document.querySelector("svg");
+          var cloneElement = element.cloneNode(true);
+          element.parentNode.replaceChild(cloneElement, element);         
+      },1000);
+    </script>
     </body>
 </html>
 
