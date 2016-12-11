@@ -6,6 +6,6 @@ app = Flask(__name__)
 @app.route('/data')
 def data() :
 	fo = open("data.txt","r+")
-	str = fo.read(10);
-	return str
+	raw_data = fo.read(10);
 	fo.close()
+	return raw_data
