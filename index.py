@@ -39,3 +39,6 @@ def data():
 def work():
     t = Timer(1.00, data)
     t.start()
+
+if __name__ == '__main__' :
+	app.run();
