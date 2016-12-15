@@ -5,8 +5,6 @@ app = Flask(__name__)
 
 
 def getTemp():
-    import time
-    import subprocess
     temp_address = "/sys/bus/w1/devices/28-03160140daff/w1_slave"
     s = 1
     while s == 1:
