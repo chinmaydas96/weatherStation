@@ -1,4 +1,4 @@
-from flask import request, Flask, url_for
+from flask import request, Flask, url_for,render_template
 from threading import Timer
 
 app = Flask(__name__)
@@ -36,7 +36,9 @@ def data():
 @app.route('/data')
 def work():
     t = Timer(1.00, data)
+    return render_template('/Views/index.html');
     t.start()
+
 
 if __name__ == '__main__' :
 	app.run();
