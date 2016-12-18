@@ -31,14 +31,12 @@ def data():
     temp = getTemp()
     with open("/static/data.tsv", "a") as myfile:
         myfile.write(dtime + "\t" + str(temp) + "\n")
+    threading.Timer(1.0, data).start()
 
-
-@app.route('/data')
+@app.route('/')
 def work():
-    t = Timer(1.00, data)
     return render_template('index.html')
-    t.start()
-
-
+    data()
+    
 if __name__ == '__main__':
     app.run()
