@@ -41,4 +41,4 @@ def work():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='192.168.43.228')
