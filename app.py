@@ -29,16 +29,14 @@ def getTime():
 def data():
     dtime = getTime()
     temp = getTemp()
-    with open("templates/Data/data.tsv", "a") as myfile:
+    with open("/static/data.tsv", "a") as myfile:
         myfile.write(dtime + "\t" + str(temp) + "\n")
 
-
-@app.route('/')
+@app.route('/data')
 def work():
     t = Timer(1.00, data)
-    return render_template('/templates/index.html');
+    return render_template('index.html');
     t.start()
 
-
 if __name__ == '__main__' :
-	app.run(host='0.0.0.0')
+	app.run(host='0.0.0.0');
