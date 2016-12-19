@@ -1,7 +1,9 @@
-from flask import request, Flask, url_for, render_template
+from flask import Flask, render_template
 from threading import Timer
 
+
 app = Flask(__name__)
+
 
 def getTemp():
     temp_address = "/sys/bus/w1/devices/28-03160140daff/w1_slave"
@@ -30,12 +32,14 @@ def data():
     temp = getTemp()
     with open("/static/data.tsv", "a") as myfile:
         myfile.write(dtime + "\t" + str(temp) + "\n")
-    threading.Timer(1.0, data).start()
+    Timer(1.0, data).start()
+
 
 @app.route('/')
 def work():
     return render_template('index.html')
     data()
-    
+
+
 if __name__ == '__main__':
     app.run()
