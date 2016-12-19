@@ -78,7 +78,6 @@
 			});
 
       setInterval(function() {
-          console.log("hi");
           path.remove();
 
           d3.tsv("{{ url_for('static', filename='data.tsv') }}", function(d) 
